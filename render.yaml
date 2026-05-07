@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: beauty-salon-node-app
+    env: node
+    buildCommand: npm ci
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: CLIENT_URL
+        value: https://beauty-salon-node-app.onrender.com
+      - key: CORS_ORIGINS
+        value: https://beauty-salon-node-app.onrender.com
+      - key: DATA_FILE
+        value: data/salon_state.json
